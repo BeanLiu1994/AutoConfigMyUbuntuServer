@@ -3,8 +3,10 @@ pathhere=pwd
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]start autoconfig sequence" > AutoConfigLog
 #0. somethings iwanna install
-apt-get install build-essential autoconf libtool libssl-dev gcc
+apt-get install build-essential autoconf libtool libssl-dev gcc zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+cd ~
 #1. shadowsocks
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]1.start" >> AutoConfigLog
 cd pathhere
