@@ -9,14 +9,14 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 cd ~
 #1. shadowsocks
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]1.start" >> AutoConfigLog
-cd pathhere
+cd $pathhere
 . ./ss.sh
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]1.end" >> AutoConfigLog
 
 #2. apache2
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]2.start" >> AutoConfigLog
-cd pathhere
+cd $pathhere
 . ./ap2.sh
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]2.end" >> AutoConfigLog
@@ -30,3 +30,5 @@ echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]3.end" >> AutoConfigLog
 
 #all done
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]all done" >> AutoConfigLog
+
+rm -r AutoConfigMyUbuntuServer
