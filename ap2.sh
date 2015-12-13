@@ -4,8 +4,8 @@
 #shadowsocks
 cd ~
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog
-apt-get install apache2 -y & wait
-pip install shadowsocks
+apt-get install apache2 -y
+wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]apache2 installed" >> AutoConfigLog
 mkdir /var/www/LpServer/public_html
 cd /var/www/LpServer/public_html

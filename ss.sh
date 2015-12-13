@@ -3,8 +3,10 @@
 #shadowsocks
 cd ~
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog
-apt-get install python-pip -y & wait
+apt-get install python-pip -y
+wait
 pip install shadowsocks
+wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]python installed" >> AutoConfigLog
 mkdir ~/ShadowSocksConfig
 cd ~/ShadowSocksConfig
