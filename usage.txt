@@ -1,0 +1,1 @@
+sh -c "$(wget https://raw.github.com/BeanLiu1994/AutoConfigMyUbuntuServer/master/run.sh -O -)"

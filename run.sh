@@ -1,8 +1,8 @@
 #!/bin/sh -e
 #run in su mode
-apt-get update
+apt-get update & wait
 
-apt-get install git -y
+apt-get install git -y & wait
 git clone https://github.com/BeanLiu1994/AutoConfigMyUbuntuServer.git
 cd AutoConfigMyUbuntuServer
 
