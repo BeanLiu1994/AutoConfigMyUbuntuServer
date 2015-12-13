@@ -7,9 +7,10 @@ echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog
 apt-get install apache2 -y
 wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]apache2 installed" >> AutoConfigLog
-mkdir /var/www/LpServer/public_html
-cd /var/www/LpServer/public_html
+mkdir -p /var/www/LpServer/public_html
 chmod -R 775 /var/www
+
+cd /var/www/LpServer/public_html
 
 echo "<!DOCTYPE html>" > index.html
 echo "<html>" >> index.html
