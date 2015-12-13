@@ -1,5 +1,7 @@
 #!/bin/sh -e
 #run in su mode
+cd ~
+
 apt-get update & wait
 
 apt-get install git -y & wait
