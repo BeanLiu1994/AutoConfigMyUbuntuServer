@@ -13,10 +13,10 @@ cd ~/ShadowSocksConfig
 echo "{" > config.json
 echo "	\"server\":\"::\"," >> config.json
 echo "	\"server_port\":\"8388\"," >> config.json
-echo "	\"local_port\":1080" >> config.json
-echo "	\"password\":\"mypassword\"" >> config.json
-echo "	\"timeout\":300" >> config.json
-echo "	\"method\":\"aes-256-cfb\"" >> config.json
+echo "	\"local_port\":1080," >> config.json
+echo "	\"password\":\"mypassword\"," >> config.json
+echo "	\"timeout\":300," >> config.json
+echo "	\"method\":\"aes-256-cfb\"," >> config.json
 echo "	\"fast_open\":false" >> config.json
 echo "}" >> config.json
 
