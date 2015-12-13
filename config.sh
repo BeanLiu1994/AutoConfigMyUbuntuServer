@@ -1,5 +1,5 @@
 #!/bin/sh -e
-pathhere=pwd
+pathhere=$pwd
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]start autoconfig sequence" > AutoConfigLog
 #0. somethings iwanna install
