@@ -11,17 +11,6 @@ mkdir /var/www/LpServer/public_html
 cd /var/www/LpServer/public_html
 chmod -R 775 /var/www
 
-<html>
-<head>
-<title>www.unixmen1.local</title>
-</head>
-<body>
-<h1>Welcome To Unixmen1.local website</h1>
-</body>
-</html>
-
-<!DOCTYPE html>
-
 echo "<!DOCTYPE html>" > index.html
 echo "<html>" >> index.html
 echo "<head>" >> index.html

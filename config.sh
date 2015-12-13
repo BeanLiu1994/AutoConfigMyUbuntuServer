@@ -10,14 +10,14 @@ cd ~
 #1. shadowsocks
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]1.start" >> AutoConfigLog
 cd pathhere
-source ss.sh
+. ss.sh
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]1.end" >> AutoConfigLog
 
 #2. apache2
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]2.start" >> AutoConfigLog
 cd pathhere
-source ap2.sh
+. ap2.sh
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]2.end" >> AutoConfigLog
 

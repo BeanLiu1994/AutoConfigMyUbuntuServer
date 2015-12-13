@@ -6,4 +6,4 @@ apt-get install git -y & wait
 git clone https://github.com/BeanLiu1994/AutoConfigMyUbuntuServer.git
 cd AutoConfigMyUbuntuServer
 
-source config.sh
+. config.sh
