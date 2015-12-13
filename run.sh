@@ -2,6 +2,8 @@
 #run in su mode
 cd ~
 
+rm -rf AutoConfigMyUbuntuServer
+
 apt-get update & wait
 
 apt-get install git -y & wait

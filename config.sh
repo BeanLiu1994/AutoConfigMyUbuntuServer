@@ -31,4 +31,4 @@ echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]3.end" >> AutoConfigLog
 #all done
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]all done" >> AutoConfigLog
 
-rm -r AutoConfigMyUbuntuServer
+rm -rf AutoConfigMyUbuntuServer
