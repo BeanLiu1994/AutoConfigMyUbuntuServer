@@ -9,8 +9,9 @@ wait
 apt-get install git -y && git clone https://github.com/BeanLiu1994/AutoConfigMyUbuntuServer.git
 wait
 
-cd AutoConfigMyUbuntuServer
+cd AutoConfigMyUbuntuServer && chmod +x *.sh
 
-chmod +x *.sh
+. ./config.sh 
+wait
 
-. ./config.sh & wait
+rm -rf AutoConfigMyUbuntuServer
