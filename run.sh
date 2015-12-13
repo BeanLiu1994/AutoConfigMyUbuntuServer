@@ -10,4 +10,4 @@ cd AutoConfigMyUbuntuServer
 
 chmod +x *.sh
 
-. config.sh & wait
+. ./config.sh & wait
