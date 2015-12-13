@@ -3,7 +3,7 @@ pathhere=pwd
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]start autoconfig sequence" > AutoConfigLog
 #0. somethings iwanna install
-apt-get install build-essential autoconf libtool libssl-dev gcc zsh
+apt-get install build-essential autoconf libtool libssl-dev gcc zsh & wait
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 cd ~
@@ -23,7 +23,7 @@ echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]2.end" >> AutoConfigLog
 
 #3. extra
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]3.start" >> AutoConfigLog
-apt-get install octave mysql-server -y
+apt-get install octave mysql-server -y & wait
 mysqladmin -u root password 123456
 cd ~
 echo "[config.sh `date '+%Y-%m-%d %H:%M:%S'`]3.end" >> AutoConfigLog
