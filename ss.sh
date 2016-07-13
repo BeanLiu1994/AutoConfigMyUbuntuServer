@@ -60,13 +60,10 @@ if [ ! "$mypassword" = "mypassword" ];then
         eval $(cat runsss.sh)
         ip=$(ifconfig eth0 |awk -F '[ :]+' 'NR==2 {print $4}')
         qr_url="ss://"$(echo -n "$encrypt:$mypassword@$ip:$port" | base64)
-        apt-get install qrencode eog -y
+        apt-get install qrencode -y
         wait
         qrencode -o qrcode.png "$qr_url"
         echo "$qr_url" > qrcode.qrcontent
-        echo "wait about 15 seconds..."
-        eog qrcode.png &
-        sleep 15
         killall eog 
 fi
 
