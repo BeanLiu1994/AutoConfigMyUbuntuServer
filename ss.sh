@@ -27,7 +27,7 @@ do
              s)
                 silent="True";;
              *) 
-                echo "unkonw argument";;
+                echo "unknow argument";;
         esac
 done
 
@@ -50,6 +50,10 @@ echo "}" >> config.json
 
 echo "	nohup ssserver -c config.json > ssslog &" > runsss.sh
 chmod +x runsss.sh
+
+if [ ! "$mypassword" = "mypassword" ];then 
+        eval $(cat runsss.sh)
+fi
 
 cd ~
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]config saved. finished" >> AutoConfigLog
