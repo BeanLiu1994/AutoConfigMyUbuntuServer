@@ -5,6 +5,8 @@
 #use "-s" to use default password
 
 cd ~
+apt-get update
+wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog
 apt-get install python-pip -y
 wait
@@ -58,7 +60,8 @@ if [ ! "$mypassword" = "mypassword" ];then
         eval $(cat runsss.sh)
         ip=$(ifconfig eth0 |awk -F '[ :]+' 'NR==2 {print $4}')
         qr_url="ss://"$(echo -n "$encrypt:$mypassword@$ip:$port" | base64)
-        apt-get install qrencode -y
+        apt-get install qrencode eog -y
+        wait
         qrencode -o qrcode.png "$qr_url"
         echo "$qr_url" > qrcode.qrcontent
         echo "wait about 15 seconds..."
