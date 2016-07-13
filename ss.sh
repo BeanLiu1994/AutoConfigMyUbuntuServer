@@ -38,13 +38,16 @@ if [ "$mypassword" = "mypassword" ];then
         fi
 fi
 
+encrypt="aes-256-cfb"
+port="8388"
+
 echo "{" > config.json
 echo "	\"server\":\"::\"," >> config.json
-echo "	\"server_port\":\"8388\"," >> config.json
+echo "	\"server_port\":\"$port\"," >> config.json
 echo "	\"local_port\":1080," >> config.json
 echo "	\"password\":\"$mypassword\"," >> config.json
 echo "	\"timeout\":300," >> config.json
-echo "	\"method\":\"aes-256-cfb\"," >> config.json
+echo "	\"method\":\"$encrypt\"," >> config.json
 echo "	\"fast_open\":false" >> config.json
 echo "}" >> config.json
 
@@ -53,6 +56,15 @@ chmod +x runsss.sh
 
 if [ ! "$mypassword" = "mypassword" ];then 
         eval $(cat runsss.sh)
+        ip=$(ifconfig eth0 |awk -F '[ :]+' 'NR==2 {print $4}')
+        qr_url="ss://"$(echo -n "$encrypt:$mypassword@$ip:$port" | base64)
+        apt-get install qrencode -y
+        qrencode -o qrcode.png "$qr_url"
+        echo "$qr_url" > qrcode.qrcontent
+        echo "wait about 15 seconds..."
+        eog qrcode.png &
+        sleep 15
+        killall eog 
 fi
 
 cd ~

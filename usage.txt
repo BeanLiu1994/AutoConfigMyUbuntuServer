@@ -2,3 +2,8 @@ sh -c "$(wget https://raw.github.com/BeanLiu1994/AutoConfigMyUbuntuServer/master
 
 sh -c "$(wget https://raw.github.com/BeanLiu1994/AutoConfigMyUbuntuServer/master/ss.sh -O -)" 
 sh -c "mypassword="123456" && $(wget https://raw.github.com/BeanLiu1994/AutoConfigMyUbuntuServer/master/ss.sh -O -)"
+
+
+二维码格式:
+ss://[base64-string]
+[base64-string]编码前的格式为 [加密方式:密码@ip:端口]
