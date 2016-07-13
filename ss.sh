@@ -7,6 +7,8 @@
 cd ~
 # apt-get update
 # wait
+apt-get update
+wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog 
 apt-get install python-pip qrencode apache2 -y
 wait
