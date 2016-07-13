@@ -13,7 +13,11 @@ wait
 echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]python installed" >> AutoConfigLog
 mkdir ~/ShadowSocksConfig
 cd ~/ShadowSocksConfig
-mypassword="mypassword"
+
+if [ "$mypassword" = "" ];then
+        mypassword="mypassword"
+fi
+
 silent="False"
 while getopts "p:s" ARGS
 do
