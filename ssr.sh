@@ -12,7 +12,7 @@ echo "[ss.sh `date '+%Y-%m-%d %H:%M:%S'`]start" >> AutoConfigLog
 apt-get install qrencode apache2 git jq -y
 wait
 rm -rf ~/shadowsocksr
-git clone https://github.com/shadowsocksr/shadowsocksr.git
+git clone https://github.com/shadowsocksr-rm/shadowsocksr.git
 
 
 wait
